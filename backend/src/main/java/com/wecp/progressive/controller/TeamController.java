@@ -44,7 +44,7 @@ public class TeamController {
         }catch(TeamDoesNotExistException t){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } 
-        catch (SQLException e) {
+        catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -57,7 +57,7 @@ public class TeamController {
         }catch(TeamAlreadyExistsException t){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         } 
-        catch (SQLException e) {
+        catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -71,7 +71,7 @@ public class TeamController {
         }catch(TeamAlreadyExistsException t){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         } 
-        catch (SQLException e) {
+        catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
